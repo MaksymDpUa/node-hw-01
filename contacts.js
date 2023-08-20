@@ -2,7 +2,6 @@ const fs = require("node:fs/promises");
 const path = require("node:path");
 const crypto = require("node:crypto");
 
-
 const contactsPath = path.join(__dirname, "./db/contacts.json");
 
 async function read() {
@@ -14,7 +13,6 @@ async function read() {
 function write(data) {
   return fs.writeFile(contactsPath, JSON.stringify(data, null, 2));
 }
-
 
 async function getAllContacts() {
   const data = await read();
